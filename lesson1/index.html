@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video src="" id="videoplayer"></video>
+<script>
+    navigator.mediaDevices.getDisplayMedia({video: true})
+    .then (stream =>{
+       let videoplayer=document.getElementById('videoplayer');
+        videoplayer.srcObject = stream;
+        videoplayer.play();
+    })
+</script>
+</body>
+</html>
