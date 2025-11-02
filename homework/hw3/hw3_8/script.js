@@ -259,17 +259,18 @@ let usersList = [
         }
     }
 ];
-let html = `<div class=”users-box”>`;
+let html = `<div class='users-box'>`;
 
 for (user of usersList) {
-    html += `<div class=”user-block”></div>
-             <h2>${user.id} – ${user.name} – ${user.username} </h2>
-             <h3>${user.email} – ${user.phone}</h3>
-             <div class=”address-block”>
-                <p>Street – ${user.address['street']}</p>
-                <p>Suite – ${user.address['suite']}</p>
-                <p>Zip code – ${user.address['zipcode']}</p>
-                </div>`
+    html += `<div class='user-block'>
+                <h2>${user.id} – ${user.name} – ${user.username} </h2>
+                <h3>${user.email} – ${user.phone}</h3>
+                <div class='address-block'>
+                    <p>Street – ${user.address['street']}</p>
+                    <p>Suite – ${user.address['suite']}</p>
+                    <p>Zip code – ${user.address['zipcode']}</p>
+                </div>
+            </div>`
 }
 html += `</div>`;
 

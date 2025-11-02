@@ -13,8 +13,8 @@ let arrayWithId = [
 ]
 for (let i = 0; i < arrayWithId.length; i += 1) {
     document.write(
-        `<div><h2>Name-${arrayWithId[i].name}</h2>
-         <p>id-${arrayWithId[i].id}</p>
+        `<div>
+         <h2>Name-${arrayWithId[i].name}-id-${arrayWithId[i].id}</h2>
          </div>`
     )
 }
