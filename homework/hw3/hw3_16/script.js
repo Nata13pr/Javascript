@@ -1,5 +1,9 @@
-// Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
-for (let i = 1; i < 100; i += 2) {
-    console.log(`Номер кроку - ${i}`);
-    document.write(`<h1>Номер кроку - ${i}</h1>`)
+// – Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+for (let i = 0; i < 100; i += 1) {
+    let stepNumber = i + 1;
+
+    if (!(stepNumber % 2)) {
+        console.log(`Парний крок - ${stepNumber}-індекс${i}`);
+        document.write(`<h1>Парний крок - ${stepNumber}</h1>`)
+    }
 }

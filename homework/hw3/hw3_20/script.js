@@ -1,141 +1,100 @@
-// 1. Створити пустий масив та :
-console.log(`--------------------a. заповнити його 50 парними числами за допомоги цикл------------------------`)
-let evenArray = [];
+// – Дано 2 масиви з рівною кількістю об’єктів.
+//
+//     Масиви:
+//
+// let usersWithId = [
+//
+//     {id: 1, name: ‘vasya’, age: 31, status: false},
+//
+// {id: 2, name: ‘petya’, age: 30, status: true},
+//
+// {id: 3, name: ‘kolya’, age: 29, status: true},
+//
+// {id: 4, name: ‘olya’, age: 28, status: false}
+//
+// ];
+//
+//
+//
+// let citiesWithId = [
+//
+//     {user_id: 3, country: ‘USA’, city: ‘Portland’},
+//
+// {user_id: 1, country: ‘Ukraine’, city: ‘Ternopil’},
+//
+// {user_id: 2, country: ‘Poland’, city: ‘Krakow’},
+//
+// {user_id: 4, country: ‘USA’, city: ‘Miami’}
+//
+// ];
+//
+//
+//
+// З’єднати в один об’єкт користувача та місто з відповідними “id” та “user_id” .
+//
+// Записати цей об’єкт в новий масив
+//
+// Example:
+//
+//     let usersWithCities = [
+//
+//         {
+//
+//             id: 1, // <===
+//
+//             name: ‘vasya’,
+//
+// age: 31,
+//
+//     status: false,
+//
+//     address: {
+//
+//     user_id: 1, // <===
+//
+//         country: ‘Ukraine’,
+//
+//     city: ‘Ternopil’
+//
+// }
+//
+// },
+//
+//
+// ]
+let usersWithId = [
 
-for (let i = 0; i < 50; i += 1) {
-    evenArray[i] = i * 2;
-}
+    {id: 1, name: 'vasya', age: 31, status: false},
 
-console.log(evenArray);
-console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
+    {id: 2, name: 'petya', age: 30, status: true},
 
-for (let i = 0; i < evenArray.length; i++) {
-    if (!(i % 3)) {
-        console.log(`Елемент ${evenArray[i]} - індекс${i}`)
-    }
-}
-console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
-for (let i = 0; i < evenArray.length; i++) {
-    if (!(i % 3) && !(evenArray[i]%2)) {
-        console.log(`Парний елемент ${evenArray[i]} - індекс${i}`)
-    }
-}
+    {id: 3, name: 'kolya', age: 29, status: true},
 
-console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
-let newEvenArray=[];
+    {id: 4, name: 'olya', age: 28, status: false}
 
-for (let i = 0; i < evenArray.length; i++) {
-    if (!(i % 3) && !(evenArray[i]%2)) {
-      newEvenArray[newEvenArray.length]= evenArray[i];
-    }
-}
-console.log(newEvenArray)
-console.log(`============================================================================================`)
+];
+let citiesWithId = [
 
-console.log(`---------------------------- b. заповнити його 50 непарними числами за допомоги циклу.--------------------`)
-let oddArray = [];
+    {user_id: 3, country: 'USA', city: 'Portland'},
 
-for (let i = 0; i < 50; i += 1) {
-    oddArray[i] = (i * 2) + 1;
-}
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
 
-console.log(oddArray);
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
 
-console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
-for (let i = 0; i < oddArray.length; i++) {
-    if (!(i % 3)) {
-        console.log(`Елемент ${oddArray[i]} - індекс${i}`)
-    }
-}
+    {user_id: 4, country: 'USA', city: 'Miami'}
 
-console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
-
-for (let i = 0; i < oddArray.length; i += 1) {
-
-    if(!(i % 3) && !(oddArray[i]%2)) {
-        console.log(`Елемент ${oddArray[i]} - індекс${i}`)
-    }else{
-        console.log(`Немає парний елементів.`)
-    }
-}
-
-console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
-let newOddArray=[];
-
-for (let i = 0; i < oddArray.length; i++) {
-    if (!(i % 3) && !(oddArray[i]%2)) {
-        newOddArray[newOddArray.length]= oddArray[i];
-    }
-}
-console.log(newOddArray)
-console.log(`============================================================================================`)
-
-
-
-console.log(`------------------- c. Заповнити масив 20-ма рандомними числами. (Google: Generate random number JS)-------------------------`)
-let randomNumbersArray = [];
-
-for (let i = 0; i < 20; i += 1) {
-    randomNumbersArray[i] = Math.round(Math.random() * 100)
-}
-console.log(randomNumbersArray);
-
-console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
-for (let i = 0; i < randomNumbersArray.length; i++) {
-    if (!(i % 3)) {
-        console.log(`Елемент ${randomNumbersArray[i]} - індекс${i}`)
-    }
-}
-
-console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
-for (let i = 0; i < randomNumbersArray.length; i++) {
-    if (!(i % 3) && !(randomNumbersArray[i]%2)) {
-        console.log(`Парний елемент ${randomNumbersArray[i]} - індекс${i}`)
-    }
-}
-console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
-let newRandomNumbersArray=[];
-
-for (let i = 0; i < randomNumbersArray.length; i++) {
-    if (!(i % 3) && !(randomNumbersArray[i]%2)) {
-        newRandomNumbersArray[newRandomNumbersArray.length]= randomNumbersArray[i];
-    }
-}
-console.log(newRandomNumbersArray)
-
-console.log(`============================================================================================`)
-console.log(`--d. Заповнити масив 20-ма рандомними числами в діапазоні від 8 до 732 (Google: Generate random number JS)---`)
-let randomNumbersWithMinMaxValueArray = [];
-
-let min = 8;
-let max = 732;
-
-for (let i = 0; i < 20; i += 1) {
-    randomNumbersWithMinMaxValueArray[i] = Math.floor((Math.random()) * (max - min) + min);
-}
-
-console.log(randomNumbersWithMinMaxValueArray);
-
-console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
-for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
-    if(!(i%3)){
-        console.log(`Елемент ${randomNumbersWithMinMaxValueArray[i]} - індекс${i}`)
+];
+let usersWithCities = []
+for (let user of usersWithId) {
+    for (let city of citiesWithId) {
+        if (user.id === city.user_id) {
+            usersWithCities[usersWithCities.length] = {
+                id: user.id, name: user.name, age: user.age, status: user.status, address: {
+                    user_id: city.user_id, country: city.country, city: city.city,
+                }
+            };
+        }
     }
 }
 
-console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
-for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
-    if (!(i % 3) && !(randomNumbersWithMinMaxValueArray[i]%2)) {
-        console.log(`Парний елемент ${randomNumbersWithMinMaxValueArray[i]} - індекс${i}`)
-    }
-}
-
-console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
-let newRandomNumbersWithMinMaxValueArray=[];
-
-for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
-    if (!(i % 3) && !(randomNumbersWithMinMaxValueArray[i]%2)) {
-        newRandomNumbersWithMinMaxValueArray[newRandomNumbersWithMinMaxValueArray.length]= randomNumbersWithMinMaxValueArray[i];
-    }
-}
-console.log(newRandomNumbersWithMinMaxValueArray)
+console.log(usersWithCities)

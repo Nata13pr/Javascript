@@ -1,20 +1,10 @@
 // – За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
-let arrayWithId = [
-    {id: 1, name: 'Monday'},
-    {id: 2, name: 'Tuesday'},
-    {id: 3, name: 'Wednesday'},
-    {id: 4, name: 'Thursday'},
-    {id: 5, name: 'Friday'},
-    {id: 6, name: 'Saturday'},
-    {id: 7, name: 'Sunday'},
-    {id: 8, name: 'month'},
-    {id: 9, name: 'year'},
-    {id: 10, name: 'age'}
-]
-for (let i = 0; i < arrayWithId.length; i += 1) {
+ let array = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'month', 'year', 'age'];
+
+for (let i = 0; i < array.length; i += 1) {
     document.write(
         `<div>
-         <h2>Name-${arrayWithId[i].name}-id-${arrayWithId[i].id}</h2>
+         <h2>${array[i]}-індекс-${i}</h2>
          </div>`
     )
 }

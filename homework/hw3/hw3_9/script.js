@@ -13,3 +13,11 @@ console.log(array);
 for (let i = 0; i < array.length; i += 1) {
     console.log(array[i]);
 }
+
+// — Створити пустий масив. Наповнити його будь-якими значеннями, звертаючись до конкретного індексу. Вивести в консоль
+let anotherArray = [];
+
+for (let j = 0; j < 20; j += 1) {
+    anotherArray[j] = j + 1;
+}
+console.log(anotherArray)

@@ -39,12 +39,10 @@ let products = [
     }
 ];
 
-let html = `<div class=”product-card”>`
 
 for (product of products) {
-    console.log(product.title)
-    html += `<h3 class=”product-title”>${product.title}. Price – ${product.price}</h3>
-    <img src=${product.image} alt=${product.title} class=”product-image”>`
+    document.write(`<div class=”product-card”>
+                   <h3 class=”product-title”>${product.title}. Price – ${product.price}</h3>
+                   <img src=${product.image} alt=${product.title} class=”product-image”>
+             </div>`)
 }
-html += `</div>`
-document.write(html);

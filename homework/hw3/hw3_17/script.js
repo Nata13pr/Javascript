@@ -1,7 +1,8 @@
-// – Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
-for (let i = 0; i < 100; i+=1) {
-    if(!(i%2)){
-        console.log(`Парний крок - ${i}`);
-        document.write(`<h1>Парний крок - ${i}</h1>`)
+// Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+for (let i = 0; i <= 100; i++) {
+    let stepNumber = i + 1;
+    if (stepNumber % 2) {
+        console.log(`Непарний крок ${stepNumber}-індекс ${i}`);
+        document.write(`<h1>Непарний крок - ${stepNumber}</h1>`)
     }
 }

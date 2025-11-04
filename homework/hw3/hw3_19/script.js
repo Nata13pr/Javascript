@@ -1,181 +1,221 @@
-// створити масив книжок (назва, кількість сторінок, автори , жанри).
+// 1. Створити пустий масив та :
+console.log(`--------------------a. заповнити його 50 парними числами за допомоги цикл------------------------`)
+let evenArray = [];
 
-const booksArray = [
-    {
-        title: "1984",
-        pages: 328,
-        authors: ["Джордж Орвелл"],
-        genres: ["Антиутопія", "Політична фантастика"]
-    },
-    {
-        title: "Убити пересмішника",
-        pages: 384,
-        authors: ["Гарпер Лі"],
-        genres: ["Художня література", "Судовий роман"]
-    },
-    {
-        title: "Великий Гетсбі",
-        pages: 180,
-        authors: ["Ф. Скотт Фіцджеральд"],
-        genres: ["Модернізм", "Трагедія"]
-    },
-    {
-        title: "Хроніки Нарнії: Лев, чаклунка та шафа",
-        pages: 206,
-        authors: ["К. С. Льюїс"],
-        genres: ["Фентезі", "Дитяча література"]
-    },
-    {
-        title: "Дюна",
-        pages: 412,
-        authors: ["Френк Герберт"],
-        genres: ["Наукова фантастика", "Епічна фантастика"]
-    },
-    {
-        title: "Гаррі Поттер і філософський камінь",
-        pages: 309,
-        authors: ["Джоан К. Роулінг"],
-        genres: ["Фентезі", "Молодіжна література"]
-    },
-    {
-        title: "Сто років самотності",
-        pages: 417,
-        authors: ["Габріель Гарсіа Маркес"],
-        genres: ["Магічний реалізм", "Роман", "Латиноамериканська література"]
-    },
-    {
-        title: "Майстер і Маргарита",
-        pages: 480,
-        authors: ["Михайло Булгаков"],
-        genres: ["Сатира", "Магічний реалізм", "Філософський роман"]
-    },
-    {
-        title: "Володар перснів: Братство Персня",
-        pages: 423,
-        authors: ["Дж. Р. Р. Толкін"],
-        genres: ["Високе фентезі", "Пригоди"]
-    },
-    {
-        title: "Автостопом по Галактиці",
-        pages: 216,
-        authors: ["Дуглас Адамс"],
-        genres: ["Наукова фантастика", "Комедія"]
-    },
-    {
-        title: "Портрет Доріана Грея",
-        pages: 254,
-        authors: ["Оскар Уайльд"],
-        genres: ["Готичний роман", "Філософський роман"]
-    },
-    {
-        title: "Гордість і упередження",
-        pages: 432,
-        authors: ["Джейн Остін"],
-        genres: ["Класичний роман", "Романтика"]
-    },
-    {
-        title: "Лоліта",
-        pages: 317,
-        authors: ["Володимир Набоков"],
-        genres: ["Сучасна література", "Психологічний роман"]
-    },
-    {
-        title: "Тінь вітру",
-        pages: 560,
-        authors: ["Карлос Руїс Сафон"],
-        genres: ["Готичний роман", "Детектив", "Історична проза"]
-    },
-    {
-        title: "Алхімік",
-        pages: 208,
-        authors: ["Пауло Коельо"],
-        genres: ["Філософський роман", "Притча"]
-    },
-    {
-        title: "Подорожі Гуллівера",
-        pages: 306,
-        authors: ["Джонатан Свіфт"],
-        genres: ["Сатира", "Пригоди"]
-    },
-    {
-        title: "Дванадцять стільців",
-        pages: 389,
-        authors: ["Ілля Ільф", "Євген Петров"],
-        genres: ["Сатира", "Комедія"]
-    },
-    {
-        title: "Загадка 451 по Фаренгейту",
-        pages: 249,
-        authors: ["Рей Бредбері"],
-        genres: ["Антиутопія", "Наукова фантастика"]
-    },
-    {
-        title: "Кафка на пляжі",
-        pages: 602,
-        authors: ["Харукі Муракамі"],
-        genres: ["Магічний реалізм", "Філософський роман"]
-    },
-    {
-        title: "Щоденник Бріджит Джонс",
-        pages: 310,
-        authors: ["Гелен Філдінг"],
-        genres: ["Чикліт", "Комедія"]
-    }
-];
+for (let i = 0; i < 50; i += 1) {
+    evenArray[i] = i * 2;
+}
+console.log(evenArray);
 
-console.log(`---------------знайти найбільшу книжку.--------------------`)
-
-let theLongestBook = booksArray[0];
-let theLongestBookPages = 0;
-
-for (book of booksArray) {
-    if (book.pages > theLongestBookPages) {
-        theLongestBookPages = book.pages;
-        theLongestBook = book;
+console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
+for (let i = 0; i < evenArray.length; i++) {
+    if (!(i % 3)) {
+        console.log(`Елемент ${evenArray[i]} - індекс${i}`)
     }
 }
-console.log(`Найбільша книжка-'${theLongestBook.title}'.Кількість сторінок-${theLongestBook.pages}`);
 
-console.log(`------------------------знайти книжку/ки з найбільшою кількістю жанрів------------------------`);
-let theLargestQuantityOfGenres = booksArray[0].genres.length;
-let bookWithTheLargestQuantityOfGenres = booksArray[0];
-
-for (book of booksArray) {
-    if (book.genres.length > theLargestQuantityOfGenres) {
-        theLargestQuantityOfGenres = book.genres.length;
-        bookWithTheLargestQuantityOfGenres = book;
+console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
+for (let i = 0; i < evenArray.length; i++) {
+    if (!(i % 3) && !(evenArray[i] % 2)) {
+        console.log(`Парний елемент ${evenArray[i]} - індекс${i}`)
     }
 }
-console.log(`Назва книжки з найбільшою кількість жанрів - ${bookWithTheLargestQuantityOfGenres.title}-кількість жанрів ${bookWithTheLargestQuantityOfGenres.genres.length}`);
 
-console.log(`------------------------ знайти книжку/ки з найдовшою назвою------------------------------`);
-let theLongestTitle = booksArray[0].title.length;
-let bookWithTheLongestTitle = booksArray[0];
+console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
+let newEvenArray = [];
 
-for (let book of booksArray) {
-    if (book.title.length > theLongestTitle) {
-        theLongestTitle = book.title.length;
-        bookWithTheLongestTitle = book;
+for (let i = 0; i < evenArray.length; i++) {
+    if (!(i % 3) && !(evenArray[i] % 2)) {
+        newEvenArray[newEvenArray.length] = evenArray[i];
     }
 }
-console.log(`Книжка з найдовшою назвою ${bookWithTheLongestTitle.title} - довжина назви ${bookWithTheLongestTitle.title.length}`)
+console.log(newEvenArray)
 
-console.log(`--------------------знайти книжку/ки, які писали 2 автори---------------------`);
-let bookWithTwoAuthors = booksArray[0];
 
-for (let book of booksArray) {
-    if (book.authors.length === 2) {
-        bookWithTwoAuthors = book;
+console.log(`Вивести кожен елемент масиву, сусід справа якого є парним`)
+
+for (let i = 1; i < evenArray.length; i++) {
+
+    if (!(evenArray[i] % 2)) {
+        console.log(`${evenArray[i - 1]} -сусід справа${evenArray[i]}`)
     }
 }
-console.log(`Книжка ${bookWithTwoAuthors.title} - має ${bookWithTwoAuthors.authors.length}-x авторів.Це ${bookWithTwoAuthors.authors[0]} і ${bookWithTwoAuthors.authors[1]}`);
 
-console.log(`------------------------знайти книжку/ки, які писав 1 автор-------------------`)
-let bookWithOneAuthor = booksArray[0];
+console.log(`============================================================================================`)
 
-for (let book of booksArray) {
-    if (book.authors.length === 1) {
-        bookWithOneAuthor = book;
+console.log(`---------------------------- b. заповнити його 50 непарними числами за допомоги циклу.--------------------`)
+let oddArray = [];
+
+for (let i = 0; i < 50; i += 1) {
+    oddArray[i] = (i * 2) + 1;
+}
+console.log(oddArray);
+
+console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
+for (let i = 0; i < oddArray.length; i++) {
+    if (!(i % 3)) {
+        console.log(`Елемент ${oddArray[i]} - індекс${i}`)
     }
 }
-console.log(`Книжка ${bookWithOneAuthor.title},кількість авторів ${bookWithOneAuthor.authors.length}.Це ${bookWithOneAuthor.authors[0]}`)
+
+console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
+for (let i = 0; i < oddArray.length; i += 1) {
+
+    if (!(i % 3) && !(oddArray[i] % 2)) {
+        console.log(`Елемент ${oddArray[i]} - індекс${i}`)
+    } else {
+        console.log(`Немає парних елементів.`)
+    }
+}
+
+console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
+let newOddArray = [];
+
+for (let i = 0; i < oddArray.length; i++) {
+    if (!(i % 3) && !(oddArray[i] % 2)) {
+        newOddArray[newOddArray.length] = oddArray[i];
+    }
+}
+console.log(newOddArray)
+
+console.log(`Вивести кожен елемент масиву, сусід справа якого є парним`)
+
+for (let i = 1; i < oddArray.length; i++) {
+
+    if (!(oddArray[i] % 2)) {
+        console.log(`${oddArray[i - 1]} -сусід справа${oddArray[i]}`)
+    }
+}
+
+console.log(`============================================================================================`)
+
+console.log(`------------------- c. Заповнити масив 20-ма рандомними числами. (Google: Generate random number JS)-------------------------`)
+let randomNumbersArray = [];
+
+for (let i = 0; i < 20; i += 1) {
+    randomNumbersArray[i] = Math.round(Math.random() * 100)
+}
+console.log(randomNumbersArray);
+
+console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
+for (let i = 0; i < randomNumbersArray.length; i++) {
+    if (!(i % 3)) {
+        console.log(`Елемент ${randomNumbersArray[i]} - індекс${i}`)
+    }
+}
+
+console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
+for (let i = 0; i < randomNumbersArray.length; i++) {
+    if (!(i % 3) && !(randomNumbersArray[i] % 2)) {
+        console.log(`Парний елемент ${randomNumbersArray[i]} - індекс${i}`)
+    }
+}
+
+console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
+let newRandomNumbersArray = [];
+
+for (let i = 0; i < randomNumbersArray.length; i++) {
+    if (!(i % 3) && !(randomNumbersArray[i] % 2)) {
+        newRandomNumbersArray[newRandomNumbersArray.length] = randomNumbersArray[i];
+    }
+}
+console.log(newRandomNumbersArray)
+
+console.log(`Вивести кожен елемент масиву, сусід справа якого є парним`)
+
+for (let i = 1; i < randomNumbersArray.length; i++) {
+
+    if (!(randomNumbersArray[i] % 2)) {
+        console.log(`${randomNumbersArray[i - 1]} -сусід справа${randomNumbersArray[i]}`)
+    }
+}
+
+console.log(`============================================================================================`)
+
+console.log(`--d. Заповнити масив 20-ма рандомними числами в діапазоні від 8 до 732 (Google: Generate random number JS)---`)
+let randomNumbersWithMinMaxValueArray = [];
+
+let min = 8;
+let max = 732;
+
+for (let i = 0; i < 20; i += 1) {
+    randomNumbersWithMinMaxValueArray[i] = Math.floor((Math.random()) * (max - min) + min);
+}
+console.log(randomNumbersWithMinMaxValueArray);
+
+console.log(`----2. Вивести за допомогою console.log кожен третій елемент----`)
+for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
+    if (!(i % 3)) {
+        console.log(`Елемент ${randomNumbersWithMinMaxValueArray[i]} - індекс${i}`)
+    }
+}
+
+console.log(`---3. Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним.--`)
+for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
+    if (!(i % 3) && !(randomNumbersWithMinMaxValueArray[i] % 2)) {
+        console.log(`Парний елемент ${randomNumbersWithMinMaxValueArray[i]} - індекс${i}`)
+    }
+}
+console.log(`---------- Вивести за допомогою console.log кожен третій елемент, тільки якщо цей елемент є парним, та записати їх в новий масив---------`)
+let newRandomNumbersWithMinMaxValueArray = [];
+
+for (let i = 0; i < randomNumbersWithMinMaxValueArray.length; i++) {
+    if (!(i % 3) && !(randomNumbersWithMinMaxValueArray[i] % 2)) {
+        newRandomNumbersWithMinMaxValueArray[newRandomNumbersWithMinMaxValueArray.length] = randomNumbersWithMinMaxValueArray[i];
+    }
+}
+console.log(newRandomNumbersWithMinMaxValueArray)
+
+console.log(`Вивести кожен елемент масиву, сусід справа якого є парним`)
+
+for (let i = 1; i < randomNumbersWithMinMaxValueArray.length; i++) {
+
+    if (!(randomNumbersWithMinMaxValueArray[i] % 2)) {
+        console.log(`${randomNumbersWithMinMaxValueArray[i - 1]} -сусід справа${randomNumbersWithMinMaxValueArray[i]}`)
+    }
+}
+
+console.log(`============================================================================================`)
+
+console.log(`Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.`)
+let arrayWithNumbers = [100, 250, 50, 168, 120, 345, 188];
+let averageCheck = 0;
+
+for (let i = 0; i < arrayWithNumbers.length; i++) {
+    averageCheck += arrayWithNumbers[i];
+}
+console.log(averageCheck)
+
+console.log(`============================================================================================`)
+
+console.log(` 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.`)
+
+let randomSecondWithNumbersArray = [];
+let differentRandomSecondWithNumbersArray = [];
+
+for (let i = 0; i < 20; i += 1) {
+    randomSecondWithNumbersArray[i] = Math.round(Math.random() * 100)
+}
+console.log('До множення', randomSecondWithNumbersArray)
+for (let number of randomSecondWithNumbersArray) {
+    differentRandomSecondWithNumbersArray[differentRandomSecondWithNumbersArray.length] = number * 5
+}
+console.log('Після множення у новому масиві', differentRandomSecondWithNumbersArray)
+
+console.log(`============================================================================================`)
+
+console.log(` 8. Створити масив з будь-якими значеннями (стрінги, числа, і тд…). пройтись по ньому, і, якщо елемент є числом, додати його в інший масив.`)
+let newIndependentMixedArray = []
+let independentMixedArray = ["Проект_0", 10, true, "Canvas_3", 26, false, "Код_6", 45, true, "Масив_9",
+    102, false, "Логіка_12", 78, true, "Тестування_15", 501, false, "Файл_18",
+    -14, true, "Створення_21", 100, false, "Елемент_24", 43, true, "Змінна_27",
+    90, false, "Завдання_30", 2, true, "Результат_33", 66, false, "Дані_36",
+    1, true, "Перевірка_39", 88, false, "Консоль_42", 5, true, "JS_45",
+    150, false, "Фініш_48", 19, true];
+
+for (let item of independentMixedArray) {
+    if (typeof item === "number") {
+        newIndependentMixedArray[newIndependentMixedArray.length] = item
+    }
+}
+console.log(newIndependentMixedArray)

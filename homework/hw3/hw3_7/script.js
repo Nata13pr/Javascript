@@ -23,18 +23,18 @@ let users = [
 ];
 for (user of users) {
     if (user.status) {
-        console.log(`Status true - has this user${user.name}`)
+        console.log(`Status true - has user ${user.name}`)
     }
 }
 
 for (user of users) {
     if (!user.status) {
-        console.log(`Status false - has this user${user.name}`)
+        console.log(`Status false - has user ${user.name}`)
     }
 }
 
 for (user of users) {
     if (user.age > 30) {
-        console.log(`Age more than 30 - has this user${user.name}`)
+        console.log(`Age more than 30 - has user ${user.name}`)
     }
 }
