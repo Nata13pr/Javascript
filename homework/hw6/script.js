@@ -79,11 +79,9 @@ let sortNums = (array, direction) => {
         sortedArray.sort((a, b) => {
             if (a > b) {
                 return 1;
-            }
-            if (a < b) {
+            } else if (a < b) {
                 return -1;
-            }
-            if (a === b) {
+            } else {
                 return 0;
             }
         })
@@ -92,11 +90,9 @@ let sortNums = (array, direction) => {
         sortedArray.sort((a, b) => {
             if (a < b) {
                 return 1;
-            }
-            if (a > b) {
+            } else if (a > b) {
                 return -1;
-            }
-            if (a === b) {
+            } else {
                 return 0;
             }
         })
@@ -126,17 +122,7 @@ let coursesAndDurationArray = [
 
 // -------------------------- — відсортувати його за спаданням за monthDuration----------------------
 
-let sortDescendingArray = coursesAndDurationArray.sort((a, b) => {
-        if (a.monthDuration < b.monthDuration) {
-            return 1
-        }
-        if (a.monthDuration > b.monthDuration) {
-            return -1;
-        }
-        if (a.monthDuration === b.monthDuration) {
-            return 0
-        }
-    }
+let sortDescendingArray = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration
 )
 console.log(sortDescendingArray)
 
@@ -153,6 +139,19 @@ let mappedArray = coursesAndDurationArray.map((number, index) => {
     }
 )
 console.log(mappedArray)
+
+console.log(` — відсортувати його за спаданням за monthDuration
+
+ — відфільтрувати, залишивши тільки курси з тривалістю понад 5 місяців
+
+ — за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration})`)
+
+let newCoursesAndDurationArray = coursesAndDurationArray
+    .sort((a, b) => b.monthDuration - a.monthDuration)
+    .filter(number => number.monthDuration > 5)
+    .map((number, index) => ({id: index + 1, ...number}))
+
+console.log(newCoursesAndDurationArray)
 
 // `взяти з arrays.js масив coursesArray
 //
