@@ -1,0 +1,40 @@
+.heading{
+    color: darkgrey;
+    font-weight: bold;
+    font-size: 4em;
+    background-color: lightgray;
+}
+.description{
+    color:darkred;
+    background-color: lightcyan;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+body{
+    margin: 0 auto;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100vw;
+}
+.header{
+    text-align: center;
+}
+
+.span{
+    display: inline-block;
+    width: 50% ;
+    text-align: center;
+}
+ul{
+    list-style: none;
+
+}
+li{
+
+    text-align: center;
+
+}
