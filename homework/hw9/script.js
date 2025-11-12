@@ -158,3 +158,35 @@ for (let item of coursesArray) {
     mainDiv.append(h2, firstSpan, secondSpan, ul);
     document.body.appendChild(mainDiv);
 }
+
+// створити три блоки з різним текстовим контентом. зробити так, щоб всі блоки мали висоту найбільшого з них.
+
+let firstDiv = document.createElement('div');
+firstDiv.style.backgroundColor = 'black';
+firstDiv.style.width = '200px';
+firstDiv.style.height = '200px';
+let secondDiv = document.createElement('div');
+secondDiv.style.backgroundColor = 'blue';
+secondDiv.style.width = '200px';
+secondDiv.style.height = '300px';
+let thirdDiv = document.createElement('div');
+thirdDiv.style.backgroundColor = 'green';
+thirdDiv.style.width = '200px';
+thirdDiv.style.height = '150px';
+
+document.body.append(firstDiv, secondDiv, thirdDiv);
+
+let blockOfDivs = [firstDiv, secondDiv, thirdDiv];
+
+let biggestHeight = parseInt(blockOfDivs[0].style.height);
+
+for (let item of blockOfDivs) {
+    if (parseInt(item.style.height) > biggestHeight) {
+        biggestHeight = item.style.height;
+    }
+}
+
+firstDiv.style.height = biggestHeight;
+secondDiv.style.height = biggestHeight;
+thirdDiv.style.height = biggestHeight;
+

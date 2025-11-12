@@ -38,3 +38,21 @@ li{
     text-align: center;
 
 }
+
+.first{
+    width: 200px;
+    height: 200px;
+    background-color: lightcyan;
+}
+
+.second{
+    width: 200px;
+    height: 300px;
+    background-color: lightblue;
+}
+
+.third{
+    width: 200px;
+    height: 150px;
+    background-color: lightgray;
+}
