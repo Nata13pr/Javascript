@@ -5,16 +5,36 @@
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
 
 
-let div = document.getElementById("div");
-div.innerText = localStorage.getItem('money') || '100грн';
+// let div = document.getElementById("div");
+// div.innerText = localStorage.getItem('money') || '100грн';
+//
+// let milliseconds = Date.now();
+// let time = localStorage.getItem('time') || milliseconds;
+//
+// if (milliseconds - Number(time) >= 10000) {
+//     localStorage.setItem('money', `${parseInt(div.innerText) + 10}грн`);
+//     div.innerText = `${parseInt(div.innerText) + 10}грн`
+// }
+// localStorage.setItem('money', div.innerText);
+// localStorage.setItem('time', milliseconds.toString())
 
-let milliseconds = Date.now();
-let time = localStorage.getItem('time') || milliseconds;
+// Коля допоміг
+const cuurentTime = Date.now();
 
-if (milliseconds - Number(time) >= 10000) {
-    localStorage.setItem('money', `${parseInt(div.innerText) + 10}грн`);
-    div.innerText = `${parseInt(div.innerText) + 10}грн`
+const storagedMoney = localStorage.getItem('money') || 100;
+const storagedTime = localStorage.getItem('time') || cuurentTime;
+
+let money = Number(storagedMoney)
+
+console.log(cuurentTime-storagedTime)
+if (cuurentTime - storagedTime >= 10000) {
+    money = money+ 10;
 }
-localStorage.setItem('money', div.innerText);
-localStorage.setItem('time', milliseconds.toString())
+let div = document.getElementById("div");
+div.innerText = `${money} грн `;
+document.body.appendChild(div);
+localStorage.setItem('money', money);
+localStorage.setItem('time', cuurentTime)
 
+// localStorage.setItem('money', storagedMoney);
+console.log(storagedMoney)
