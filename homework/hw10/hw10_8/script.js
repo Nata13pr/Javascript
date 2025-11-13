@@ -30,7 +30,7 @@ document.body.append(form, tableContainer);
 form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        tableContainer.innerHTML = '';
+        tableContainer.innerText = '';
 
         let table = document.createElement('table');
         table.style.borderCollapse = 'collapse'
@@ -39,7 +39,7 @@ form.addEventListener('submit', function (e) {
             let tr = document.createElement('tr');
             for (let j = 0; j < inputQuantityOfCells.value; j++) {
                 let td = document.createElement('td');
-                td.innerHTML = inputOfInnerText.value;
+                td.innerText = inputOfInnerText.value;
                 td.style.border = '1px solid black';
                 tr.appendChild(td);
             }
