@@ -18,7 +18,7 @@
 // localStorage.setItem('money', div.innerText);
 // localStorage.setItem('time', milliseconds.toString())
 
-// Коля допоміг
+// Колін варіантг
 const cuurentTime = Date.now();
 
 const storagedMoney = localStorage.getItem('money') || 100;
@@ -36,5 +36,5 @@ document.body.appendChild(div);
 localStorage.setItem('money', money);
 localStorage.setItem('time', cuurentTime)
 
-// localStorage.setItem('money', storagedMoney);
+
 console.log(storagedMoney)
