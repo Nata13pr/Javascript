@@ -3,6 +3,8 @@ let mainDiv = document.createElement("div");
 let h1 = document.createElement("h1");
 h1.innerText = 'Кошик замовлень';
 
+mainDiv.appendChild(h1);
+
 const orderFunction = (carts, parentTag, description) => {
     console.log(description);
     if (!Array.isArray(carts)) {
@@ -25,7 +27,7 @@ const orderFunction = (carts, parentTag, description) => {
                         li.appendChild(img);
                     } else {
                         let p = document.createElement("p");
-                        p.innerText = `${element}---${cart[element]}`;
+                        p.innerText = `${element} - ${cart[element]}`;
                         li.appendChild(p);
                     }
 
@@ -39,7 +41,8 @@ const orderFunction = (carts, parentTag, description) => {
     }
 }
 
-document.body.append(h1, mainDiv);
+document.body.appendChild(mainDiv);
+
 fetch('https://dummyjson.com/carts')
     .then(res => res.json())
     .then(responseObj =>
