@@ -6,7 +6,7 @@ h1.innerText = 'Кошик замовлень';
 mainDiv.appendChild(h1);
 
 const orderFunction = (carts, parentTag, description) => {
-    console.log(description);
+
     if (!Array.isArray(carts)) {
         throw new Error(`It's not an array`);
     } else {
